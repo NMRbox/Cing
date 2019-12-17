@@ -55,7 +55,8 @@ if ( $useHiRes ) then
 endif
 
 set povray_dir = $povray_path:h
-$povray_path -L$povray_dir/include +A0.3 -D +I$pov_file +O$tga_tmp +W$widthCount +H$heightCount >& $log
+#add +FT for pov 3.7+ ;gcw nmrbox
+$povray_path +FT -L$povray_dir/include +A0.3 -D +I$pov_file +O$tga_tmp +W$widthCount +H$heightCount >& $log
 #$povray_dir/povray -L$povray_dir/include +A0.3 -D +I$pov_file +O$tga_tmp +W3040 +H2128 >& $log
 set sts = $status
 if ( $sts ) then
