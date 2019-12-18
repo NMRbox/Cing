@@ -4799,7 +4799,7 @@ Rob might have caught this by requiring c_av be at least 2.0.
 
 def getArithmeticAverageAndSigmaHis(his):
     """Straight up arithmetic average and sd as if linear."""
-    if his == None:
+    if his is None:
         nTerror("Failed getArithmeticAverageAndSigmaHis for his is None")
         return None
     if his.size == 0: # check for preventing division by zero
