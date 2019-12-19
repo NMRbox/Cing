@@ -29,10 +29,10 @@ def getArchiveIdFromDirectoryName(dirName):
             break
         # end if
     # end def
-    nTdebug("Returning %s as archiveID" % mapBase2Archive[baseName])
     if not baseName in mapBase2Archive.keys():
         nTwarning("Failed to map dirName [%s] with baseName [%s] because baseName is an unenumerated baseName." % (dirName, baseName))
         return None
     # end if
+    nTdebug("Returning %s as archiveID" % mapBase2Archive[baseName])
     return mapBase2Archive[baseName]
 # end def
