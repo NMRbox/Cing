@@ -128,10 +128,10 @@ else
 %(close_if)s
 
 # Use -u to ensure messaging streams for stdout/stderr don't mingle (too much).
-alias cing%(equals)s'(python_location) -u $CINGROOT/python/cing/main.py'
-alias queen%(equals)s'(python_location) -u $CINGROOT/python/queen/main.py'
-alias cyana2cing%(equals)s'(python_location) -u $CINGROOT/python/cyana2cing/cyana2cing.py'
-alias refine%(equals)s'(python_location) -u $CINGROOT/python/Refine/refine.py'
+alias cing%(equals)s'%(python_location)s -u $CINGROOT/python/cing/main.py'
+alias queen%(equals)s'%(python_location)s -u $CINGROOT/python/queen/main.py'
+alias cyana2cing%(equals)s'%(python_location)s -u $CINGROOT/python/cyana2cing/cyana2cing.py'
+alias refine%(equals)s'%(python_location)s -u $CINGROOT/python/Refine/refine.py'
 alias cython%(equals)s'$CYTHON/bin/cython'
 
 #WATTOS
