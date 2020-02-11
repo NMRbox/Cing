@@ -160,7 +160,8 @@ class ExternalDataSource( object ):
 
 
     def addEntriesToQueue( self, newerEntries ):
-        newerEntries.sort( 'date', inplace=True )
+        if hasattr(newerEntries,'sort'):
+            newerEntries.sort( 'date', inplace=True )
         newerEntriesToQueue = newerEntries[ 'pdb' ].tolist( )
         newerEntriesToQueue = [ x for x in newerEntriesToQueue if x not in self.queuedEntryCodes ]
         self.queuedEntryCodes += newerEntriesToQueue
